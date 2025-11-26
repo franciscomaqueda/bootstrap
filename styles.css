@@ -1,0 +1,82 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#main-navbar {
+    padding-top: 0.1rem; 
+    padding-bottom: 0.1rem; 
+}
+
+
+.navbar-brand-custom {
+    color: rgb(194, 194, 194) !important; 
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.nav-link-custom {
+    color: black !important; 
+    font-size: 1.0rem; 
+    
+    
+    padding: 0.3rem 0.8rem !important; 
+    border: 2px solid black; 
+    border-radius: 0.5rem; 
+    transition: all 0.2s ease-in-out; 
+    margin: 0 0.5rem; 
+}
+
+.nav-link-custom:hover {
+    background-color: #f0f0f0; 
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+
+.spacer {
+    min-height: 100vh;
+}
+
+#imagen-nosotros {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#imagen-nosotros img {
+    max-width: 250px; 
+    height: auto;
+}
+
+.card-img-fixed-height {
+    height: 450px; 
+    object-fit: cover;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('imagen0.jfif');
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    padding-bottom: 3rem !important;
+}
