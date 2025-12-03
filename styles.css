@@ -1,82 +1,435 @@
-html {
-    scroll-behavior: smooth;
-}
-
-#main-navbar {
-    padding-top: 0.1rem; 
-    padding-bottom: 0.1rem; 
-}
-
-
-.navbar-brand-custom {
-    color: rgb(194, 194, 194) !important; 
-    font-size: 3rem;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 50%; 
-    transform: translate(-50%, -50%); 
-}
-
-.nav-link-custom {
-    color: black !important; 
-    font-size: 1.0rem; 
-    
-    
-    padding: 0.3rem 0.8rem !important; 
-    border: 2px solid black; 
-    border-radius: 0.5rem; 
-    transition: all 0.2s ease-in-out; 
-    margin: 0 0.5rem; 
-}
-
-.nav-link-custom:hover {
-    background-color: #f0f0f0; 
-    color: #000000 !important;
-    text-decoration: none;
-}
-
-
-.spacer {
-    min-height: 100vh;
-}
-
-#imagen-nosotros {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#imagen-nosotros img {
-    max-width: 250px; 
-    height: auto;
-}
-
-.card-img-fixed-height {
-    height: 450px; 
-    object-fit: cover;
-}
-
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+/* ================================
+            TIPOGRAFÍA 
+================================ */
+@font-face {
+    font-family: "tipoPixel";
+    src: url("fuentes/tipoPixel.ttf") format("truetype");
 }
 
 body {
-    background-image: url('imagen0.jfif');
-    
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    font-family: "tipoPixel", sans-serif;
+    background: #000;
+    position: relative; 
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 0.5rem;
-    padding-bottom: 3rem !important;
+/* ===  FONDO FIJO EN TODA LA PÁGINA === */
+
+body::before {
+    content: '';
+    position: fixed; /* Mantiene la imagen estática */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/parquefondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: -1; 
+}
+
+/* ================================
+    SECCIÓN PRINCIPAL 
+================================ */
+#intro {
+    width: 100%;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    display: flex; 
+    min-height: 100vh;
+}
+
+/* ================================
+    CONTENEDOR TITULO
+================================ */
+.titulo-box {
+    background: rgba(155, 125, 64, 0.85);
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 4px solid #5e3e1a;
+}
+
+.titulo-box h1 {
+    font-size: 48px;
+    color: #b6111e;
+    text-shadow: 2px 2px #000;
+}
+
+.sub {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #292929;
+}
+
+/* autores */
+.autores {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ================================
+    TARJETAS DE PERSONA 
+================================ */
+.card-persona {
+    width: 260px;
+    border: 4px dashed #000;    
+    padding: 5px;
+}
+
+.card-persona img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.card-persona p {
+    margin: 3px;
+    color: #000;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* ================================
+    BOTONES MEDIOS 
+================================ */
+.boton-menu {
+    display: block;
+    background: rgba(88, 187, 88, 0.8);
+    padding: 14px;
+    border-radius: 8px;
+    color: #083a08;
+    border: 4px solid #094f09;
+    text-shadow: 1px 1px #fff;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.boton-menu:hover {
+    background: rgba(60, 150, 60, 0.85);
+}
+
+/* ================================
+    SECCIÓN ¿QUIÉNES SOMOS?
+================================ */
+.seccion-perfil {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+.info-box-perfil {
+    max-width: 500px;
+    background: rgba(180, 188, 77, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    border: 4px solid #5e3e1a; 
+    font-size: 21px;
+    box-shadow: 
+        10px 10px 0 #5e3e1a, 
+        -10px -10px 0 #5e3e1a; 
+}
+
+/* CLASES ESPECÍFICAS PARA EL COLOR DE TEXTO */
+
+/* 1. Rómulo: Texto Blanco */
+.info-box-romulo p {
+    color: #fff; 
+    text-shadow: 1px 1px #000; 
+}
+
+/* 2. Francisco: Texto Negro */
+.info-box-francisco p {
+    color: #000; 
+}
+
+
+
+.card-perfil-img {
+    width: 100%;
+    max-width: 300px;
+    border: 6px dashed #fff;
+    padding: 5px;
+    background: #000;
+}
+
+.card-perfil-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ================================
+    DIVISOR ENTRE SECCIONES 
+================================ */
+
+.seccion-divisor {
+    width: 100%;
+    padding: 20px 0; 
+    background: #58bb58; 
+}
+
+
+.separador-pixelado {
+    height: 10px; 
+    margin: 0 auto; 
+    width: 90%; 
+    /* Patrón de guiones negros */
+    background: repeating-linear-gradient(
+        to right,
+        #000, /* Guión negro */
+        #000 20px,
+        transparent 20px, /* Espacio transparente */
+        transparent 40px
+    );
+    border: 2px solid #000; /* Borde negro para que resalte más */
+}
+
+
+#quienes .separador-pixelado {
+    width: 80%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    height: 4px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffffff,
+        #ffffff 10px,
+        #000 10px,
+        #000 20px
+    );
+}
+
+/* ================================
+    SECCIÓN ¿QUÉ HICIMOS? 
+================================ */
+
+/* Contenedores de texto principales */
+.info-box-historia {
+    max-width: 480px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 4px solid #094f09; /* Borde verde oscuro, similar al de los botones */
+    color: #000000;
+    box-shadow: 8px 8px 0 #000;
+}
+
+/* Fondo verde claro para Temática */
+.box-tematica {
+    background: rgba(88, 187, 88, 0.9); 
+}
+
+/* Fondo marrón/verde oscuro para Proceso de producción */
+.box-proceso {
+    background: rgba(155, 125, 64, 0.9); 
+}
+
+.titulo-historia {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #083a08; 
+    text-shadow: 1px 1px #fff;
+}
+
+.box-proceso .titulo-historia {
+    color: #b6111e; 
+    text-shadow: 1px 1px #000;
+}
+
+.contenido-historia {
+    font-size: 16px; 
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Tarjetas de Aventura y Videojuego */
+.card-historia {
+    width: 100%;
+    max-width: 250px;
+    background: rgba(88, 187, 88, 0.8);
+    border: 4px solid #000;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-historia img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.titulo-card-historia {
+    font-size: 16px;
+    color: #000;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+/* Botones dentro de las tarjetas */
+.boton-menu-historia {
+    width: 80%;
+    margin-bottom: 10px;
+    /* Reutiliza el estilo del boton-menu */
+    display: block;
+    background: rgba(88, 187, 88, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    color: #083a08;
+    border: 4px solid #094f09;
+    text-shadow: 1px 1px #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton-menu-historia:hover {
+    background: rgba(60, 150, 60, 0.85);
+}
+
+/* ================================
+    FOOTER
+================================ */
+
+
+.footer-pixel-background {
+    background: #58bb58; 
+    border-top: 4px solid #1a1a1a;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #58bb58, 
+        #58bb58 10px, 
+        #9b7d40 10px, /* Línea diagonal */
+        #9b7d40 12px
+    );
+}
+
+.footer-box {
+    background: rgba(155, 125, 64, 0.85); 
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 4px solid #5e3e1a;
+    display: inline-block;
+    box-shadow: 8px 8px 0 #5e3e1a; 
+}
+
+.footer-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b6111e;
+    text-shadow: 1px 1px #000;
+    margin: 0;
+}
+
+.separador-footer {
+    width: 80px; 
+    height: 4px;
+    background: #5e3e1a;
+    margin: 10px auto; 
+}
+
+.autores-footer {
+    color: #b6111e !important;
+    text-shadow: 1px 1px #000;
+}
+
+
+/* ================================
+    RESOPOONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+
+    .titulo-box h1 {
+        font-size: 32px;
+    }
+
+    .card-persona {
+        width: 200px;
+    }
+
+    .boton-menu {
+        font-size: 14px;
+    }
+    
+    
+    .autores {
+        font-size: 16px; 
+    }
+
+    /* Ajustes para móviles */
+    .info-box-perfil {
+        max-width: none;
+        box-shadow: none;
+    }
+    
+    .info-box-historia {
+        max-width: none;
+        box-shadow: none;
+    }
+
+    
+    .contenido-historia {
+        font-size: 15px;
+    }
+
+    .footer-box {
+        padding: 15px 20px;
+    }
+
+    .footer-box p {
+        font-size: 14px;
+    }
+
+    .boton-menu-historia {
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    
+    .footer-pixel-background {
+        background-image: none;
+        background-color: #58bb58;
+    }
+
+    
+    .seccion-divisor {
+        padding: 10px 0;
+    }
+
+    .separador-pixelado {
+        width: 95%;
+    }
+}
+
+/* ================================
+    ESTILOS ESPECÍFICOS PARA MODALES (JUEGOS/AVENTURA)
+================================ */
+
+/* Contenedor del Iframe dentro del modal. Usamos Flexbox para centrar. */
+.modal-body-iframe {
+    padding: 0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Estilo del Iframe */
+.juego-iframe {
+    width: 100%; 
+    height: 80vh; 
+    border: none;
+    display: block;
+
 }
