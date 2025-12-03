@@ -1,168 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La defensa del Parque</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS PERSONAL -->
+    <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="styles.css" />
+   
 
-    <title>Un Show Más - Bootstrap</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white border-bottom" id="main-navbar">
-        <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- ================================
+     SECCIÓN 1 — PORTADA
+================================ -->
+<section id="intro" class="d-flex flex-column justify-content-center align-items-center">
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- TÍTULO -->
+    <div class="titulo-box text-center">
+        <h1>La defensa del Parque</h1>
+        <p class="sub">TRABAJO REALIZADO POR:</p>
 
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item m-1">
-                        <a class="nav-link nav-link-custom" href="#aventura">Aventura</a>
-                    </li>
-                    <li class="nav-item m-1">
-                        <a class="nav-link nav-link-custom" href="#juego-section">Nuestro juego</a>
-                    </li>
-                </ul>
+        <div class="row autores">
+            <div class="col-6">Rómulo Lucesole. S</div>
+            <div class="col-6">Francisco Maqueda. G</div>
+        </div>
+    </div>
 
-                <a class="navbar-brand navbar-brand-custom" href="#"> Un show más </a>
+    <!-- TARJETAS + BOTONES -->
+    <div class="row mt-4 container justify-content-center text-center">
 
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item m-1">
-                        <a class="nav-link nav-link-custom" href="#quienes-somos-section">Quienes somos?</a>
-                    </li>
-                </ul>
+        <!-- CARD IZQUIERDA -->
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="card-persona">
+                <img src="img/dochiqui.jpg" alt="Rómulo Lucesole">
+                <p>Rómulo Lucesole. S</p>
             </div>
         </div>
-    </nav>
 
-    <div class="container mt-5 pt-5">
+        <!-- BOTONES CENTRALES -->
+        <div class="col-12 col-md-4 d-flex flex-column justify-content-center gap-3">
+            <a class="boton-menu" href="#quienes">¿Quienes somos?</a>
+            <a class="boton-menu" href="#historia">¿Que hicimos?</a>
+        </div>
 
-        <h1 class="text-center mb-4" id="unshowmas">Un show más!</h1>
-        <p class="text-center text-muted" id="pagina-creada">---- Esta pagina fue creada por Rómulo Lucesole y Francisco
-            Maqueda ----</p>
-
-        <section class="mt-5" id="quienes-somos-section">
-            <p class="text-center" id="imagen-nosotros">
-                <img src="Conmurro.jpeg" class="img-fluid d-block mx-auto mb-3" alt="Amigos para toda la vida">
-                Amigos para toda la vida
-            </p>
-
-            <h2 class="text-center"> ¿Quiénes somos? </h2>
-            <p> Nos conocemos desde el jardin, ambos tuvimos la suerte de coincidir en el mismo lugar, el colegio Themis
-                Speroni de Villa Elisa...</p>
-            <p>Alli fue donde nos formamos, con las mismas amistades y pensamientos. Compartimos desde lo primero y
-                hasta
-                dia de hoy seguimos teniendo un vinculo cada vez mas fuerte...</p>
-
-            <div class="card mx-auto my-4" style="max-width: 20rem;">
-                <img src="Conmurro2.jpeg" alt="Card example image" class="card-img-top card-img-fixed-height">
-                <div class="card-body">
-                    <h5 class="card-title">estos somos nosotros!</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Para que nos conozcan un poco más...</h6>
-                    <p class="card-text">Esta imagen es de varios años atras...</p>
-                </div>
+        <!-- CARD DERECHA -->
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="card-persona">
+                <img src="img/narfchiqui.jpg" alt="Francisco Maqueda">
+                <p>Francisco Maqueda. G</p>
             </div>
-
-        </section>
-
-
-        <section class="mt-5">
-            <h2 class="text-center"> Nuestra temática ! </h2>
-
-            <p>Elegimos la serie de dibujitos animados de "Un show más", ya que ambos integrantes compartimos esta serie
-                desde muy chicos, ademas, dicha serie cuenta con capítulos super diversos, abarca muchisimos temas
-                distintos
-                y ademas los personajes son muy caracteristicos y carismaticos, cosa que ayuda mucho cuando se trata de
-                un
-                juego o una aventura gráfica</p>
-            <p>También aprovechamos la variedad de capítulos para facilitarnos las imagenes, ideas y los procesos de los
-                trabajos...</p>
-
-        </section>
-
-        <section class="mt-5" id="proceso-produccion">
-            <h2 class="text-center"> Nuestro proceso de producción! </h2>
-            <p>Como anteriormente comentabamos, ambos tuvimos la suerte de compartir muchas cosas en la vida, una de
-                ellas
-                es "Villa Elisa" la localidad en donde ambos vivimos. Debido a esto nuestros hogares estan relativamente
-                cerca y no fue una complicación juntarse a tomar unos mates y ponernos a trabajar con los tp's </p>
-            <p> Cometimos el error de pensar que el primer Tp iba a ser sencillo y se nos complicó un poco más de lo
-                esperado, los detalles, los errores y tipeos eran largos... Pero no nos frustramos y seguimos intentando
-                hasta dar con el resultado final, el cual quedó exactamente como lo habiamso pensado desde un
-                principio...
-            </p>
-
-            <div class="row justify-content-center mb-5">
-
-                <div class="col-md-6 d-flex justify-content-center">
-                    <div class="card my-4" style="width: 30rem;" id="aventura">
-                        <img src="imagen17.jfif" alt="Card example image" class="card-img-top card-img-fixed-height">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Nuestro gran proceso de 1er año !</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Creado con esfuerzo y cariño</h6>
-                            <p class="card-text">Desde esta caja, podras acceder a nuestra aventura web de multiples
-                                finales!</p>
-                            <a href="https://github.com/RomuCrackBstia/pmiw/tree/tpfinalparte1" target="_blank">
-                                <button class="btn btn-primary w-100">QUIERO VER LA AVENTURA!</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 d-flex justify-content-center" id="juego-section">
-                    <div class="card my-4" style="width: 30rem;">
-                        <img src="Regular Show.jfif" alt="Card example image"
-                            class="card-img-top card-img-fixed-height">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Nuestro gran proceso de 1er año (2do cuatrimestre) !</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Creado con MÁS esfuerzo y MÁS cariño</h6>
-                            <p class="card-text">Desde esta caja podras jugar nuestro juego online!</p>
-                            <a href="https://github.com/RomuCrackBstia/pmiw/tree/tpfinalparte2" target="_blank">
-                                <button class="btn btn-secondary w-100">QUIERO JUGAR!</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
 
     </div>
 
-    <footer class="bg-light text-dark text-center py-4 mt-5 border-top">
-        <div class="container">
-            <h5 class="mb-3 text-secondary">Fin de nuestra página</h5>
-            <div class="d-flex justify-content-center gap-2 flex-wrap">
-                <a href="#quienes-somos-section" class="btn btn-outline-dark btn-sm">
-                    ¿Quiénes somos?
-                </a>
-                
-                <a href="#" class="btn btn-outline-dark btn-sm">
-                    Inicio
-                </a>
+</section>
 
-                <a href="#proceso-produccion" class="btn btn-outline-dark btn-sm">
-                    Proceso de producción
-                </a>
+<!-- ================================
+     DIVISOR 1 (INTRO A QUIÉNES SOMOS)
+================================ -->
+<div class="seccion-divisor">
+    <div class="separador-pixelado w-100 my-0"></div>
+</div>
+
+<!-- ================================
+     SECCIÓN 2 — ¿QUIÉNES SOMOS?
+================================ -->
+<section id="quienes" class="seccion-perfil d-flex flex-column align-items-center py-5">
+    
+    <div class="container my-5">
+        
+        <!-- Tarjeta de perfil superior (Rómulo) -->
+        <div class="row justify-content-center align-items-start mb-5 g-4">
+            
+            <!-- Imagen izquierda -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card-perfil-img">
+                    <img src="img/murrochiq.jpg" alt="Rómulo Lucesole">
+                </div>
             </div>
-            <p class="mt-4 mb-0 small text-muted">Muchas gracias por leer! Cordiales saludos!</p>
+
+            <!-- Información derecha - TEXTO BLANCO -->
+            <div class="col-12 col-md-7 d-flex justify-content-center justify-content-md-start">
+                <div class="info-box-perfil info-box-romulo">
+                    <p>
+                        Nombre: Rómulo Lucesole Saavedra<br>
+                        Edad: 20 años<br>
+                        Localidad: Villa Elisa<br>
+                        Educación: Colegio secundario Roberto T. Speroni. Villa Elisa<br>
+                        Rol del trabajo: Diseño e idea<br>
+                        Serie animada favorita: Rick and Morty<br>
+                        Intereses: Multimedia, diseño UX, edición de video, creación de propuestas interactivas.
+                    </p>
+                </div>
+            </div>
+
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+        <!-- Separador simulado  -->
+        <div class="separador-pixelado w-100 my-4 d-none d-md-block"></div>
+
+        <!-- Tarjeta de perfil inferior (Francisco) -->
+        <div class="row justify-content-center align-items-start mt-5 g-4">
+
+            <!-- Información izquierda - TEXTO NEGRO -->
+            <div class="col-12 col-md-7 order-2 order-md-1 d-flex justify-content-center justify-content-md-end">
+                <div class="info-box-perfil info-box-francisco">
+                    <p>
+                        Nombre: Francisco Maqueda García<br>
+                        Edad: 20 años<br>
+                        Localidad: Villa Elisa<br>
+                        Educación: Colegio secundario Roberto T. Speroni. Villa Elisa<br>
+                        Rol del trabajo: Programación y gestión<br>
+                        Serie animada favorita: Un show mas<br>
+                        Intereses: Multimedia, programación, mecanica, diseño de experiencias interactivas
+                    </p>
+                </div>
+            </div>
+
+            <!-- Imagen derecha -->
+            <div class="col-12 col-md-4 order-1 order-md-2 d-flex justify-content-center">
+                <div class="card-perfil-img">
+                    <img src="img/narfflow.jpg" alt="Francisco Maqueda">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ================================
+     DIVISOR 2 (QUIÉNES SOMOS A QUÉ HICIMOS)
+================================ -->
+<div class="seccion-divisor">
+    <div class="separador-pixelado w-100 my-0"></div>
+</div>
+
+<!-- ================================
+     SECCIÓN 3 — ¿QUÉ HICIMOS?
+================================ -->
+<section id="historia" class="seccion-historia py-5 d-flex flex-column align-items-center">
+    <div class="container my-5">
+        <div class="row justify-content-center g-5">
+
+            <!-- Caja de texto izquierda: Temática -->
+            <div class="col-12 col-md-5 d-flex justify-content-center">
+                <div class="info-box-historia box-tematica">
+                    <p class="titulo-historia">Tematica:</p>
+                    <p class="contenido-historia">
+                        Para la tematica y el desarrollo de este Trabajo practico se nos dio el universo "Series Animadas". Por lo que elegimos la serie "Un Show mas". Inventamos una historia donde a los personajes se los envia a hacer una tarea y tienen que decidir si realizarla ellos, o pedirle ayuda a la IA.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Caja de texto derecha: Proceso de producción -->
+            <div class="col-12 col-md-5 d-flex justify-content-center">
+                <div class="info-box-historia box-proceso">
+                    <p class="titulo-historia">Proceso de producción:</p>
+                    <p class="contenido-historia">
+                        Para definir la estetica y la idea de nuestro juego elegimos una escena de nuestra hisitoria donde los protagonistas son atacados por un enemigo de un juego retro, el cual esta hecho con pixel art, al cual derrotan con la ayuda de un aliado también salido de un videojuego con las mismas características. Para el juego nos inspiramos en la mecanica de "Space Invaders".
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Tarjetas de AVENTURA y VIDEOJUEGO -->
+        <div class="row justify-content-center g-4 mt-5">
+            
+            <!-- Tarjeta 1: Aventura Gráfica -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card-historia">
+                    <img src="img/aventura.jfif" alt="Aventura gráfica">
+                    <p class="titulo-card-historia">Aventura gráfica:</p>
+                    <a class="boton-menu-historia" 
+                       href="#" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#modalAventura">Pulsa aquí</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Videojuego -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card-historia">
+                    <img src="img/juego.jfif" alt="Videojuego">
+                    <p class="titulo-card-historia">Video Juego:</p>
+                    <a class="boton-menu-historia" 
+                       href="#" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#modalJuego">Pulsa aquí</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================
+     FOOTER
+================================ -->
+<footer class="text-center py-4 footer-pixel-background">
+    <div class="footer-box">
+        <p class="mb-2">¡GRACIAS POR VER!</p>
+        <div class="separador-footer"></div>
+        <p class="mb-0">TRABAJO REALIZADO POR:</p>
+        <p class="autores-footer">FRANCISCO MAQUEDA / RÓMULO LUCESOLE</p>
+    </div>
+</footer>
+
+
+<!-- ================================
+     MODAL DE AVENTURA GRÁFICA (tp1final)
+================================ -->
+<div class="modal fade" id="modalAventura" tabindex="-1" aria-labelledby="modalAventuraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAventuraLabel">Aventura Gráfica</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body modal-body-iframe">
+        <iframe class="juego-iframe" src="tp1final/index.html"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================
+     MODAL DE VIDEOJUEGO (tpfinalparte2)
+================================ -->
+<div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalJuegoLabel">Videojuego</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body modal-body-iframe">
+        <iframe class="juego-iframe" src="tpfinalparte2/index.html"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
